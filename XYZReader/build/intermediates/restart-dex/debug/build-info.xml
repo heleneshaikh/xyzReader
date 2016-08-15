@@ -1,33 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="x86"
-    api-level="19"
-    density="xhdpi"
+    api-level="23"
+    density="420dpi"
     format="7"
-    timestamp="434976163346155"
-    token="4235373630591970224" >
+    timestamp="436875414544489"
+    token="4235373630591970224"
+    verifier="R_CLASS_CHANGE" >
 
     <task
         name="javac"
-        duration="899" />
+        duration="353" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="181" />
+        duration="22" />
     <task
         name="verifier"
-        duration="22" />
+        duration="2" />
 
     <artifact
-        location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/outputs/apk/XYZReader-debug.apk"
-        type="MAIN" />
+        location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/res/resources-debug.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
+        type="DEX" />
 
-    <build timestamp="434976163346155" >
+    <build timestamp="436849553105040" >
         <artifact
             location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/outputs/apk/XYZReader-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="436875414544489"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/res/resources-debug.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>
