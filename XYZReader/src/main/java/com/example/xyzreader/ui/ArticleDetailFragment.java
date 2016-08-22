@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.graphics.Palette;
 import android.text.Html;
@@ -47,14 +48,14 @@ public class ArticleDetailFragment extends Fragment implements
     private DrawInsetsFrameLayout drawInsetsFrameLayout;
     private ColorDrawable statusBarColorDrawable;
     private int topInset;
-    private View photoContainerView;
-    private ImageView photoView;
     private int scrollY;
     private boolean isCard;
     private int statusBarFullOpacityBottom;
     @BindView(R.id.article_title)TextView titleView;
     @BindView(R.id.article_byline) TextView bylineView;
     @BindView(R.id.article_body) TextView bodyView;
+    @BindView(R.id.photo) ImageView photoView;
+    @BindView(R.id.photo_container) View photoContainerView;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -124,7 +125,6 @@ public class ArticleDetailFragment extends Fragment implements
             }
         });
 
-        photoView = (ImageView) rootView.findViewById(R.id.photo);
         photoContainerView = rootView.findViewById(R.id.photo_container);
 
         statusBarColorDrawable = new ColorDrawable(0);
@@ -138,6 +138,8 @@ public class ArticleDetailFragment extends Fragment implements
                         .getIntent(), getString(R.string.action_share)));
             }
         });
+
+        rootView.findViewById(R.id.share_fab).getResources().getColor(R.color.primary_dark);
 
         bindViews();
         updateStatusBar();

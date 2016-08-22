@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,10 +21,13 @@ import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 import com.example.xyzreader.data.ItemsContract;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * An activity representing a single Article detail screen, letting you swipe between articles.
  */
-public class ArticleDetailActivity extends ActionBarActivity
+public class ArticleDetailActivity extends AppCompatActivity
         implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private Cursor cursor;
@@ -31,10 +35,10 @@ public class ArticleDetailActivity extends ActionBarActivity
     private long selectedItemId;
     private int selectedItemUpButtonFloor = Integer.MAX_VALUE;
     private int topInset;
-    private ViewPager pager;
+    @BindView(R.id.pager)ViewPager pager;
+    @BindView(R.id.up_container)View upButtonContainer;
+    @BindView(R.id.action_up)View upButton;
     private MyPagerAdapter pagerAdapter;
-    private View upButtonContainer;
-    private View upButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,14 +52,15 @@ public class ArticleDetailActivity extends ActionBarActivity
 
         getLoaderManager().initLoader(0, null, this);
 
+        ButterKnife.bind(this);
+
         pagerAdapter = new MyPagerAdapter(getFragmentManager());
-        pager = (ViewPager) findViewById(R.id.pager);
         pager.setAdapter(pagerAdapter);
         pager.setPageMargin((int) TypedValue
                 .applyDimension(TypedValue.COMPLEX_UNIT_DIP, 1, getResources().getDisplayMetrics()));
         pager.setPageMarginDrawable(new ColorDrawable(0x22000000));
 
-        pager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+        pager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
             public void onPageScrollStateChanged(int state) {
                 super.onPageScrollStateChanged(state);
