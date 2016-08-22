@@ -1572,9 +1572,10 @@ containing a value of this type.
         public static final int cardview_compat_inset_shadow=0x7f07004c;
         public static final int cardview_default_elevation=0x7f07004d;
         public static final int cardview_default_radius=0x7f07004e;
+        public static final int cv_margin=0x7f07004f;
         public static final int detail_body_bottom_margin=0x7f070012;
         public static final int detail_body_text_size=0x7f070013;
-        public static final int detail_body_top_margin=0x7f07004f;
+        public static final int detail_body_top_margin=0x7f070050;
         public static final int detail_card_max_width=0x7f070019;
         public static final int detail_card_top_margin=0x7f07000e;
         public static final int detail_inner_horiz_margin=0x7f070006;
@@ -1586,13 +1587,14 @@ containing a value of this type.
         public static final int dialog_fixed_height_minor=0x7f07000b;
         public static final int dialog_fixed_width_major=0x7f07000c;
         public static final int dialog_fixed_width_minor=0x7f07000d;
-        public static final int disabled_alpha_material_dark=0x7f070050;
-        public static final int disabled_alpha_material_light=0x7f070051;
-        public static final int fab_elevation=0x7f070052;
+        public static final int disabled_alpha_material_dark=0x7f070051;
+        public static final int disabled_alpha_material_light=0x7f070052;
+        public static final int fab_elevation=0x7f070053;
         public static final int fab_margin=0x7f070017;
-        public static final int fab_press_translation_z=0x7f070053;
+        public static final int fab_press_translation_z=0x7f070054;
         public static final int list_side_margin=0x7f07001a;
         public static final int list_toolbar_side_margin=0x7f07001b;
+        public static final int tv_padding=0x7f070055;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha=0x7f020000;
@@ -2056,12 +2058,12 @@ containing a value of this type.
         public static final int Theme_AppCompat_Light_NoActionBar=0x7f0800d6;
         public static final int Theme_AppCompat_NoActionBar=0x7f0800d7;
         public static final int Theme_Bacon=0x7f0800d8;
-        public static final int Theme_Bacon_Detail=0x7f0800d9;
-        public static final int ThemeOverlay_AppCompat=0x7f0800da;
-        public static final int ThemeOverlay_AppCompat_ActionBar=0x7f0800db;
-        public static final int ThemeOverlay_AppCompat_Dark=0x7f0800dc;
-        public static final int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0800dd;
-        public static final int ThemeOverlay_AppCompat_Light=0x7f0800de;
+        public static final int ThemeOverlay_AppCompat=0x7f0800d9;
+        public static final int ThemeOverlay_AppCompat_ActionBar=0x7f0800da;
+        public static final int ThemeOverlay_AppCompat_Dark=0x7f0800db;
+        public static final int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0800dc;
+        public static final int ThemeOverlay_AppCompat_Light=0x7f0800dd;
+        public static final int Toolbar=0x7f0800de;
         public static final int Widget_AppCompat_ActionBar=0x7f0800df;
         public static final int Widget_AppCompat_ActionBar_Solid=0x7f0800e0;
         public static final int Widget_AppCompat_ActionBar_TabBar=0x7f0800e1;

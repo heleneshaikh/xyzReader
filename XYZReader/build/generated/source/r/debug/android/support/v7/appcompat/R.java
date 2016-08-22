@@ -358,8 +358,8 @@ public final class R {
 		public static final int dialog_fixed_height_minor = 0x7f07000b;
 		public static final int dialog_fixed_width_major = 0x7f07000c;
 		public static final int dialog_fixed_width_minor = 0x7f07000d;
-		public static final int disabled_alpha_material_dark = 0x7f070050;
-		public static final int disabled_alpha_material_light = 0x7f070051;
+		public static final int disabled_alpha_material_dark = 0x7f070051;
+		public static final int disabled_alpha_material_light = 0x7f070052;
 	}
 	public static final class drawable {
 		public static final int abc_ab_share_pack_mtrl_alpha = 0x7f020000;
@@ -758,11 +758,11 @@ public final class R {
 		public static final int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 0x7f0800c7;
 		public static final int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 0x7f0800c8;
 		public static final int TextAppearance_Widget_AppCompat_Toolbar_Title = 0x7f0800c9;
-		public static final int ThemeOverlay_AppCompat = 0x7f0800da;
-		public static final int ThemeOverlay_AppCompat_ActionBar = 0x7f0800db;
-		public static final int ThemeOverlay_AppCompat_Dark = 0x7f0800dc;
-		public static final int ThemeOverlay_AppCompat_Dark_ActionBar = 0x7f0800dd;
-		public static final int ThemeOverlay_AppCompat_Light = 0x7f0800de;
+		public static final int ThemeOverlay_AppCompat = 0x7f0800d9;
+		public static final int ThemeOverlay_AppCompat_ActionBar = 0x7f0800da;
+		public static final int ThemeOverlay_AppCompat_Dark = 0x7f0800db;
+		public static final int ThemeOverlay_AppCompat_Dark_ActionBar = 0x7f0800dc;
+		public static final int ThemeOverlay_AppCompat_Light = 0x7f0800dd;
 		public static final int Theme_AppCompat = 0x7f0800ca;
 		public static final int Theme_AppCompat_CompactMenu = 0x7f0800cb;
 		public static final int Theme_AppCompat_Dialog = 0x7f0800cc;

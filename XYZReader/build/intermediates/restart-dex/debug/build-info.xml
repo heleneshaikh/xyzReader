@@ -4,22 +4,22 @@
     api-level="23"
     density="420dpi"
     format="7"
-    timestamp="436875414544489"
+    timestamp="507847866686939"
     token="4235373630591970224"
     verifier="R_CLASS_CHANGE" >
 
     <task
         name="javac"
-        duration="353" />
+        duration="419" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="22" />
+        duration="74" />
     <task
         name="verifier"
-        duration="2" />
+        duration="30" />
 
     <artifact
         location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/res/resources-debug.ap_"
@@ -30,14 +30,17 @@
     <artifact
         location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
         type="DEX" />
+    <artifact
+        location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
+        type="DEX" />
 
-    <build timestamp="436849553105040" >
+    <build timestamp="506279633726971" >
         <artifact
             location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/outputs/apk/XYZReader-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="436875414544489"
+        timestamp="507847866686939"
         verifier="R_CLASS_CHANGE" >
         <artifact
             location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/res/resources-debug.ap_"
@@ -47,6 +50,9 @@
             type="DEX" />
         <artifact
             location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
             type="DEX" />
     </build>
 
