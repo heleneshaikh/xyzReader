@@ -4,7 +4,7 @@
     api-level="23"
     density="420dpi"
     format="7"
-    timestamp="533543292745846"
+    timestamp="534604030110081"
     token="4235373630591970224" >
 
     <task
@@ -34,7 +34,7 @@
             location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
             type="DEX" />
     </build>
-    <build timestamp="533543292745846" >
+    <build timestamp="534604030110081" >
         <artifact
             location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/res/resources-debug.ap_"
             type="RESOURCES" />
