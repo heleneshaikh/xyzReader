@@ -1,58 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="23"
-    density="420dpi"
+    density="xxxhdpi"
     format="7"
-    timestamp="508763620762336"
-    token="4235373630591970224"
-    verifier="FIELD_TYPE_CHANGE" >
+    timestamp="515710407548694"
+    token="4235373630591970224" >
 
     <task
         name="javac"
-        duration="333" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="50" />
+        duration="0" />
     <task
         name="verifier"
-        duration="10" />
+        duration="0" />
 
     <artifact
-        location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
-        type="DEX" />
+        location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/res/resources-debug.ap_"
+        type="RESOURCES" />
 
-    <build timestamp="506279633726971" >
+    <build timestamp="515583791077784" >
         <artifact
             location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/outputs/apk/XYZReader-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="507847866686939"
-        verifier="R_CLASS_CHANGE" >
+        timestamp="515668653962200"
+        verifier="COMPATIBLE" >
         <artifact
-            location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-            type="DEX" />
+            location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/builds/debug/515668653962200/classes.dex"
+            type="RELOAD_DEX" />
     </build>
-    <build timestamp="507925809270762" >
-        <artifact
-            location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
-            type="DEX" />
-    </build>
-    <build timestamp="508376268379920" >
+    <build timestamp="515710407548694" >
         <artifact
             location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/res/resources-debug.ap_"
             type="RESOURCES" />
-    </build>
-    <build
-        timestamp="508763620762336"
-        verifier="FIELD_TYPE_CHANGE" >
-        <artifact
-            location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

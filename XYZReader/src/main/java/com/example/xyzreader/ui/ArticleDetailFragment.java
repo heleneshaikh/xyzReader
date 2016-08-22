@@ -8,7 +8,6 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Rect;
-import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ShareCompat;
@@ -22,11 +21,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A fragment representing a single Article detail screen. This fragment is
@@ -49,8 +50,11 @@ public class ArticleDetailFragment extends Fragment implements
     private View photoContainerView;
     private ImageView photoView;
     private int scrollY;
-    private boolean isCard = false;
+    private boolean isCard;
     private int statusBarFullOpacityBottom;
+    @BindView(R.id.article_title)TextView titleView;
+    @BindView(R.id.article_byline) TextView bylineView;
+    @BindView(R.id.article_body) TextView bodyView;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -174,11 +178,8 @@ public class ArticleDetailFragment extends Fragment implements
             return;
         }
 
-        TextView titleView = (TextView) rootView.findViewById(R.id.article_title);
-        TextView bylineView = (TextView) rootView.findViewById(R.id.article_byline);
+        ButterKnife.bind(this, rootView);
         bylineView.setMovementMethod(new LinkMovementMethod());
-        TextView bodyView = (TextView) rootView.findViewById(R.id.article_body);
-        bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Rosario-Regular.ttf"));
 
         if (cursor != null) {
             rootView.setAlpha(0);
@@ -203,8 +204,6 @@ public class ArticleDetailFragment extends Fragment implements
                                 Palette p = Palette.generate(bitmap, 12);
                                 mutedColor = p.getDarkMutedColor(0xFF333333);
                                 photoView.setImageBitmap(imageContainer.getBitmap());
-                                rootView.findViewById(R.id.meta_bar)
-                                        .setBackgroundColor(mutedColor);
                                 updateStatusBar();
                             }
                         }

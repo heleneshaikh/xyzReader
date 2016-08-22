@@ -144,11 +144,7 @@ public class ArticleListActivity extends AppCompatActivity implements
             cursor.moveToPosition(position);
             holder.titleView.setText(cursor.getString(ArticleLoader.Query.TITLE));
             holder.subtitleView.setText(
-                    DateUtils.getRelativeTimeSpanString(
-                            cursor.getLong(ArticleLoader.Query.PUBLISHED_DATE),
-                            System.currentTimeMillis(), DateUtils.HOUR_IN_MILLIS,
-                            DateUtils.FORMAT_ABBREV_ALL).toString()
-                            + " by "
+                            " by "
                             + cursor.getString(ArticleLoader.Query.AUTHOR));
             holder.thumbnailView.setImageUrl(
                     cursor.getString(ArticleLoader.Query.THUMB_URL),
