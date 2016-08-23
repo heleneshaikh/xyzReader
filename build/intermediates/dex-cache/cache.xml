@@ -5,7 +5,7 @@
         jar="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="22.0.1"
-        sha1="e61dad2ed0b6382c7479ac6bab850a3934eb49ba">
+        sha1="3f70eeca00e4093735ceb4395fe28796d353765c">
         <dex dex="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e805c08dc2fbf425c1940a95857a8f559a64a4cc/classes.dex" />
     </item>
     <item
@@ -33,7 +33,7 @@
         jar="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="22.0.1"
-        sha1="d6c621557aab2784f013d55f0fc5103a4045ab70">
+        sha1="e5a5ce7b842d61aee81f13b7e8589f3c1ac9756d">
         <dex dex="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4c3d42925da275ba715c28be9174a2a5703d2e40/classes.dex" />
     </item>
     <item
