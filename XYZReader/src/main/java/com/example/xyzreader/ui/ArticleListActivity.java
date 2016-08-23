@@ -10,6 +10,7 @@ import android.content.Loader;
 import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -18,10 +19,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 import com.example.xyzreader.data.ItemsContract;
 import com.example.xyzreader.data.UpdaterService;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -40,6 +43,7 @@ public class ArticleListActivity extends AppCompatActivity implements
     SwipeRefreshLayout swipeRefreshLayout;
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
+    int location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,10 +135,12 @@ public class ArticleListActivity extends AppCompatActivity implements
                 @Override
                 public void onClick(View view) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        DynamicHeightNetworkImageView image = (DynamicHeightNetworkImageView) view.findViewById(R.id.thumbnail);
+                        image.setTransitionName(getString(R.string.transition_photo));
                         ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation(
                                 ArticleListActivity.this,
-                                view.findViewById(R.id.thumbnail),
-                                getString(R.string.transition_photo)); //view.getTransitionName() crashes
+                                image,
+                                image.getTransitionName()); //view.getTransitionName() crashes
                         startActivity(new Intent(Intent.ACTION_VIEW, ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))), activityOptions.toBundle());
                     } else {
                         startActivity(new Intent(Intent.ACTION_VIEW,
@@ -157,6 +163,8 @@ public class ArticleListActivity extends AppCompatActivity implements
                     cursor.getString(ArticleLoader.Query.THUMB_URL),
                     ImageLoaderHelper.getInstance(ArticleListActivity.this).getImageLoader());
             holder.thumbnailView.setAspectRatio(cursor.getFloat(ArticleLoader.Query.ASPECT_RATIO));
+            location = position;
+
         }
 
         @Override
