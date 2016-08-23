@@ -143,7 +143,6 @@ public class ArticleListActivity extends AppCompatActivity implements
                 }
 
             });
-
             return vh;
         }
 

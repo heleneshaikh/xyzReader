@@ -4,40 +4,30 @@
     api-level="23"
     density="xxxhdpi"
     format="7"
-    timestamp="563227882376394"
-    token="4235373630591970224"
-    verifier="METHOD_DELETED" >
+    timestamp="569854010524784"
+    token="4235373630591970224" >
 
     <task
         name="javac"
-        duration="331" />
+        duration="296" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="12" />
+        duration="99" />
     <task
         name="verifier"
-        duration="2" />
+        duration="26" />
 
     <artifact
-        location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
-        type="DEX" />
+        location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/outputs/apk/XYZReader-debug.apk"
+        type="MAIN" />
 
-    <build
-        timestamp="562922088118226"
-        verifier="CLASS_ADDED" >
+    <build timestamp="569854010524784" >
         <artifact
-            location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="563227882376394"
-        verifier="METHOD_DELETED" >
-        <artifact
-            location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
-            type="DEX" />
+            location="/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/outputs/apk/XYZReader-debug.apk"
+            type="MAIN" />
     </build>
 
 </instant-run>
