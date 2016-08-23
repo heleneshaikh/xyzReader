@@ -33,8 +33,7 @@
             android:layout_margin="@dimen/list_toolbar_side_margin"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_gravity="bottom"
-            >
+            android:layout_gravity="bottom">
 
         </android.support.v7.widget.Toolbar>
     </FrameLayout>

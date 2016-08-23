@@ -216,10 +216,6 @@ public class ArticleDetailFragment extends Fragment implements
             @Override
             public boolean onPreDraw() {
                 rootView.getViewTreeObserver().removeOnPreDrawListener(this);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    AppCompatActivity activity = (AppCompatActivity) getActivity();
-                    activity.supportStartPostponedEnterTransition();
-                }
                 return false;
             }
         });
