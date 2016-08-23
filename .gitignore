@@ -1,1 +1,1 @@
-*.apk *.ap_ bin/ gen/ .gradle/ build/
+*.apk *.ap_ bin/ gen/ .gradle/ build/ .idea/
