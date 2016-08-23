@@ -79,9 +79,6 @@ public class ArticleDetailActivity extends AppCompatActivity
             }
         });
 
-        upButtonContainer = findViewById(R.id.up_container);
-
-        upButton = findViewById(R.id.action_up);
         upButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,6 +104,9 @@ public class ArticleDetailActivity extends AppCompatActivity
                 startId = ItemsContract.Items.getItemId(getIntent().getData());
                 selectedItemId = startId;
             }
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            supportPostponeEnterTransition();
         }
     }
 

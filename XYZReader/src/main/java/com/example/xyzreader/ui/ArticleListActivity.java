@@ -15,16 +15,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.text.format.DateUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 import com.example.xyzreader.data.ItemsContract;
 import com.example.xyzreader.data.UpdaterService;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -137,7 +134,7 @@ public class ArticleListActivity extends AppCompatActivity implements
                         ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation(
                                 ArticleListActivity.this,
                                 view.findViewById(R.id.thumbnail),
-                                "");
+                                getString(R.string.transition_photo)); //view.getTransitionName() crashes
                         startActivity(new Intent(Intent.ACTION_VIEW, ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))), activityOptions.toBundle());
                     } else {
                         startActivity(new Intent(Intent.ACTION_VIEW,

@@ -105,7 +105,7 @@
     },
     {
         "merged": "/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_arrow_back.png",
-        "source": "/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/src/main/res/drawable-xxhdpi/ic_arrow_back.png"
+        "source": "/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/generated/res/pngs/debug/drawable-xxhdpi/ic_arrow_back.png"
     },
     {
         "merged": "/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",

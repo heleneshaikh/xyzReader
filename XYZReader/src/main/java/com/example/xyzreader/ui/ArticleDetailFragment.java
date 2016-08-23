@@ -9,9 +9,11 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ShareCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 import android.text.Html;
 import android.text.format.DateUtils;
@@ -20,6 +22,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.android.volley.VolleyError;
@@ -57,10 +60,6 @@ public class ArticleDetailFragment extends Fragment implements
     @BindView(R.id.photo) ImageView photoView;
     @BindView(R.id.photo_container) View photoContainerView;
 
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
     public ArticleDetailFragment() {
     }
 
@@ -121,7 +120,6 @@ public class ArticleDetailFragment extends Fragment implements
                 scrollY = scrollView.getScrollY();
                 getActivityCast().onUpButtonFloorChanged(itemId, ArticleDetailFragment.this);
                 photoContainerView.setTranslationY((int) (scrollY - scrollY / PARALLAX_FACTOR));
-                updateStatusBar();
             }
         });
 
@@ -142,37 +140,7 @@ public class ArticleDetailFragment extends Fragment implements
         rootView.findViewById(R.id.share_fab).getResources().getColor(R.color.primary_dark);
 
         bindViews();
-        updateStatusBar();
         return rootView;
-    }
-
-    private void updateStatusBar() {
-        int color = 0;
-        if (photoView != null && topInset != 0 && scrollY > 0) {
-            float f = progress(scrollY,
-                    statusBarFullOpacityBottom - topInset * 3,
-                    statusBarFullOpacityBottom - topInset);
-            color = Color.argb((int) (255 * f),
-                    (int) (Color.red(mutedColor) * 0.9),
-                    (int) (Color.green(mutedColor) * 0.9),
-                    (int) (Color.blue(mutedColor) * 0.9));
-        }
-        statusBarColorDrawable.setColor(color);
-        drawInsetsFrameLayout.setInsetBackground(statusBarColorDrawable);
-    }
-
-    static float progress(float v, float min, float max) {
-        return constrain((v - min) / (max - min), 0, 1);
-    }
-
-    static float constrain(float val, float min, float max) {
-        if (val < min) {
-            return min;
-        } else if (val > max) {
-            return max;
-        } else {
-            return val;
-        }
     }
 
     private void bindViews() {
@@ -206,7 +174,6 @@ public class ArticleDetailFragment extends Fragment implements
                                 Palette p = Palette.generate(bitmap, 12);
                                 mutedColor = p.getDarkMutedColor(0xFF333333);
                                 photoView.setImageBitmap(imageContainer.getBitmap());
-                                updateStatusBar();
                             }
                         }
 
@@ -245,6 +212,17 @@ public class ArticleDetailFragment extends Fragment implements
         }
 
         bindViews();
+        rootView.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+            @Override
+            public boolean onPreDraw() {
+                rootView.getViewTreeObserver().removeOnPreDrawListener(this);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    AppCompatActivity activity = (AppCompatActivity) getActivity();
+                    activity.supportStartPostponedEnterTransition();
+                }
+                return false;
+            }
+        });
     }
 
     @Override

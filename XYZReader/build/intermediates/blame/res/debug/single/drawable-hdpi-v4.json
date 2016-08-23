@@ -144,6 +144,10 @@
         "source": "/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/drawable-hdpi/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
+        "merged": "/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_arrow_back.png",
+        "source": "/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/generated/res/pngs/debug/drawable-hdpi/ic_arrow_back.png"
+    },
+    {
         "merged": "/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
         "source": "/Users/heleneshaikh/Documents/Android/Udacity/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/drawable-hdpi/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
